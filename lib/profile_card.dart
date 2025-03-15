@@ -63,7 +63,7 @@ class ProfileCard extends StatelessWidget {
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                const Icon(Icons.phone, size: 16, color: Colors.green),
+                const Icon(Icons.phone, size: 16, color: Colors.black),
                 const SizedBox(width: 5),
                 Text(phoneNumber, style: const TextStyle(fontSize: 14)),
               ],

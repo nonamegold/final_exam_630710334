@@ -16,11 +16,11 @@ class MyApp extends StatelessWidget {
         appBar: AppBar(
           title: const Text("Custom Widget"),
           centerTitle: true,
-          backgroundColor: Colors.pink[50],
+          backgroundColor: Colors.red[400],
         ),
         body: const Center(
           child: ProfileCard(
-            name: "Meathawat Thaniphatworakij",
+            name: "เมธาวัจน์ ธนิพัฒน์วรกิจ 630710334",
             position: "CS",
             email: "thaniphatworaki_m@silpakorn.edu",
             phoneNumber: "097159XXXX",
