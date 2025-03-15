@@ -20,7 +20,7 @@ class HomeScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("แอป Mobile Development")),
+      appBar: AppBar(title: Text("ข้อสอบไฟนอลMobile")),
       body:  Center(
         child: Column(
         mainAxisAlignment: MainAxisAlignment.center,

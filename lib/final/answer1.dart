@@ -1,17 +1,5 @@
 import 'package:flutter/material.dart';
-void main() {
-  runApp(MyApp());
-}
 
-class MyApp extends StatelessWidget {
-  @override
-  Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      home: UserProfileScreen(),
-    );
-  }
-}
 class UserProfileScreen extends StatelessWidget {
   void showSnackbar(BuildContext context, String message) {
     ScaffoldMessenger.of(context).showSnackBar(
@@ -22,9 +10,8 @@ class UserProfileScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("โปรไฟล์ผู้ใช้งาน")),
+      appBar: AppBar(title: Text("โปรไฟล์ผู้ใช้")),
       body: Column(
-        mainAxisAlignment: MainAxisAlignment.center,
         children: [
           CircleAvatar(
             radius: 50,
@@ -37,17 +24,14 @@ class UserProfileScreen extends StatelessWidget {
           ListTile(
             leading: Icon(Icons.settings, color: Colors.blue),
             title: Text("การตั้งค่า"),
-            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.lock, color: Colors.blue),
             title: Text("เปลี่ยนรหัสผ่าน"),
-            onTap: () {},
           ),
           ListTile(
             leading: Icon(Icons.help, color: Colors.blue),
             title: Text("ความเป็นส่วนตัว"),
-            onTap: () {},
           ),
           SizedBox(height: 20),
           ElevatedButton(
@@ -57,7 +41,6 @@ class UserProfileScreen extends StatelessWidget {
           SizedBox(height: 10),
           ElevatedButton(
             onPressed: () => showSnackbar(context, "ออกจากระบบ"),
-            style: ElevatedButton.styleFrom(backgroundColor: Colors.red),
             child: Text("ออกจากระบบ"),
           ),
         ],

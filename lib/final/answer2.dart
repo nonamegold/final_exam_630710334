@@ -38,14 +38,14 @@ class _ShippingCalculatorScreenState extends State<ShippingCalculatorScreen> {
     double totalCost = baseCost + extraCost + speedCost;
 
     setState(() {
-      result = "ค่าจัดส่งทั้งหมด: ${totalCost.toStringAsFixed(2)} บาท";
+      result = "ค่าจัดส่งทั้งหมด: ฿ ${totalCost.toStringAsFixed(2)}";
     });
   }
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
-      appBar: AppBar(title: Text("คำนวณค่าจัดส่งสินค้า")),
+      appBar: AppBar(title: Text("คำนวณค่าจัดส่ง")),
       body: Padding(
         padding: EdgeInsets.all(16.0),
         child: Column(
@@ -53,12 +53,12 @@ class _ShippingCalculatorScreenState extends State<ShippingCalculatorScreen> {
             TextField(
               controller: weightController,
               keyboardType: TextInputType.number,
-              decoration: InputDecoration(labelText: "น้ำหนักสินค้า (กิโลกรัม)"),
+              decoration: InputDecoration(labelText: "น้ำหนักสินค้า(กก):"),
             ),
             Text(
-              "เลือกระยะทาง:",
-              textAlign: TextAlign.left,
+              'เลือกระยะทาง:',
               style: const TextStyle(fontSize: 15),
+              textAlign: TextAlign.left,
             ),
             SizedBox(height: 10),
             DropdownButton<String>(
